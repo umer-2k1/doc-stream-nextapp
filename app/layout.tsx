@@ -1,5 +1,6 @@
-import "@/styles/globals.css";
-import { Inter as FontSans } from "@next/font/google";
+// import "@/styles/globals.css";
+import "./globals.css";
+import { Inter as FontSans } from "next/font/google";
 
 import { cn } from "@/lib/utils";
 import React from "react";
