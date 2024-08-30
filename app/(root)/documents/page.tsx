@@ -12,7 +12,7 @@ const Documents = () => {
         <Box className="document-list-container">
           <Box className="document-list-title">
             <h3 className="text-28-semibold">All Documents</h3>
-            <AddDocumentBtn />
+            <AddDocumentBtn documents={documents}/>
           </Box>
           <ul className="document-ul">
             {documents?.map((i, index) => (
@@ -46,7 +46,7 @@ const Documents = () => {
             height={40}
             className="mx-auto"
           />
-          <AddDocumentBtn />
+          <AddDocumentBtn documents={documents} />
         </Box>
       )}
     </Box>
