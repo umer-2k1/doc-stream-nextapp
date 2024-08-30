@@ -41,6 +41,19 @@ const config = {
           400: "#27344D",
           500: "#2E3D5B",
         },
+        "spring-green": {
+          50: "#edfff5",
+          100: "#d5ffea",
+          200: "#aeffd7",
+          300: "#70ffb9",
+          400: "#2bfd93",
+          500: "#00ff7f",
+          600: "#00c05b",
+          700: "#00964a",
+          800: "#06753e",
+          900: "#076036",
+          950: "#00371c",
+        },
       },
       fontFamily: {
         sans: ["var(--font-sans)", ...fontFamily.sans],
@@ -71,7 +84,7 @@ const config = {
 function addVariablesForColors({ addBase, theme }: any) {
   let allColors = flattenColorPalette(theme("colors"));
   let newVars = Object.fromEntries(
-    Object.entries(allColors).map(([key, val]) => [`--${key}`, val])
+    Object.entries(allColors).map(([key, val]) => [`--${key}`, val]),
   );
 
   addBase({
