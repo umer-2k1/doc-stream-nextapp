@@ -18,6 +18,10 @@ import {
 
 import { Button } from "./ui/button";
 
+interface DeleteModalProps {
+  roomId: string;
+}
+
 export const DeleteModal = ({ roomId }: DeleteModalProps) => {
   const [open, setOpen] = useState(false);
   const [loading, setLoading] = useState(false);
@@ -81,3 +85,4 @@ export const DeleteModal = ({ roomId }: DeleteModalProps) => {
     </Dialog>
   );
 };
+
