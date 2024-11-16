@@ -19,7 +19,7 @@ const CollaborativeRoom = ({
   currentUserType,
 }: CollaborativeRoomProps) => {
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const inputRef = useRef<HTMLDivElement | null>(null);
+  const inputRef = useRef<HTMLInputElement | null>(null);
   const [documentTitle, setDocumentTitle] = useState<string>(
     roomMetadata.title,
   );
@@ -89,7 +89,7 @@ const CollaborativeRoom = ({
                   placeholder="Enter title"
                   onChange={(e) => setDocumentTitle(e.target.value)}
                   onKeyDown={updateTitleHandler}
-                  disable={!editing}
+                  disabled={!editing}
                   className="document-title-input"
                 />
               ) : (
@@ -133,7 +133,7 @@ const CollaborativeRoom = ({
               </SignedIn>
             </div>
           </Header>
-          <Editor roomId={roomId} currentUserType={currentUserType} />
+          <Editor roomId={roomId as string} currentUserType={currentUserType} />
         </div>
       </ClientSideSuspense>
     </RoomProvider>
