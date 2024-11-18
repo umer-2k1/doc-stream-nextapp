@@ -8,16 +8,15 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
-
 import { useSelf } from "@liveblocks/react/suspense";
 import React, { useState } from "react";
 import { Button } from "./ui/button";
 import Image from "next/image";
-import { Label } from "./ui/label";
 import { Input } from "./ui/input";
 import UserTypeSelector from "./UserTypeSelector";
 import Collaborator from "./Collaborator";
 import { updateDocumentAccess } from "@/lib/actions/room.actions";
+import { Label } from "./ui/label";
 
 const ShareModal = ({
   roomId,
