@@ -8,22 +8,18 @@ const Document = async ({ params: { id } }: SearchParamProps) => {
   const clerkUser = await currentUser();
   if (!clerkUser) redirect("/sign-in");
 
-  // console.log("clerkUser", clerkUser);
   const emailAddress = clerkUser.emailAddresses?.[0]?.emailAddress;
-  console.log("emailAddress", emailAddress);
 
   const room = await getDocument({
     roomId: id,
     userId: emailAddress,
   });
-  console.log("room", room);
 
   if (!room) redirect("/");
 
   const userIds = Object.keys(room.usersAccesses);
   const users = await getClerkUsers({ userIds });
 
-  console.log("users", users);
   const filteredUsers = users.filter((user: User) => user !== null);
 
   const usersData = filteredUsers.map((user: User) => ({
@@ -32,7 +28,6 @@ const Document = async ({ params: { id } }: SearchParamProps) => {
       ? "editor"
       : "viewer",
   }));
-  console.log("usersData ======================>", usersData);
 
   const currentUserType = room.usersAccesses[emailAddress]?.includes(
     "room:write",

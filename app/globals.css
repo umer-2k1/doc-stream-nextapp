@@ -134,7 +134,7 @@
   }
 
   .comments-container {
-    @apply mb-10 flex w-full flex-col items-center justify-center space-y-4 lg:w-fit;
+    @apply mb-10 flex w-full flex-col items-center justify-center space-y-4 bg-dark-200 lg:w-fit;
   }
 
   .comment-composer {
@@ -219,7 +219,7 @@
 .lb-thread-comments,
 .lb-composer,
 .lb-comment-reaction {
-  background-color: #0f1c34;
+  background-color: #0f1c34 !important;
   color: #fff;
 }
 
@@ -265,7 +265,7 @@
 .lb-dropdown-item,
 .lb-dropdown-item-icon,
 .lb-composer-editor {
-  color: #fff;
+  color: #fff !important;
 }
 
 .lb-composer-action {
@@ -288,7 +288,7 @@
 .lb-emoji-picker-search-icon,
 .lb-emoji-picker-category-header-title,
 .lb-emoji-picker-search::placeholder {
-  color: #b4c6ee;
+  color: #b4c6ee !important;
 }
 
 .data-liveblocks-portal {
@@ -297,11 +297,11 @@
 
 .lb-root:where(:not(.lb-root .lb-root)) {
   --lb-dynamic-background: #1b2840;
-  color: #fff;
+  color: #fff !important;
 }
 
 .lb-composer-editor :where([data-placeholder]) {
-  color: #b4c6ee;
+  color: #b4c6ee !important;
   font-size: 14px;
 }
 
@@ -310,5 +310,5 @@
 }
 
 .lb-elevation {
-  background: #0f1c34;
+  background: #0f1c34 !important;
 }
