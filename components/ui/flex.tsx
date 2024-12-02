@@ -68,5 +68,6 @@ const Flex = forwardRef<HTMLDivElement, FlexProps>(
     );
   },
 );
+Flex.displayName = "Flex";
 
 export { Flex };

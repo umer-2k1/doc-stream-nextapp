@@ -9,7 +9,8 @@ const Box = forwardRef<HTMLDivElement, BoxProps>(
         {children}
       </div>
     );
-  }
+  },
 );
+Box.displayName = "Box";
 
 export { Box };
