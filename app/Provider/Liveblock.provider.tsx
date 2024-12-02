@@ -14,13 +14,9 @@ const LiveblockProvider = ({ children }: { children: ReactNode }) => {
 
   return (
     <LiveblocksProvider
-      // publicApiKey={
-      //   "pk_dev_wsSL9SmLfl81GmjyKzVNz08tNA3vql6KhUXnCi2vXb-zya_OCG_LFyTJAWAa1EXw"
-      // }
       authEndpoint="/api/liveblocks-auth"
       resolveUsers={async ({ userIds }) => {
         const users = await getClerkUsers({ userIds });
-
         return users;
       }}
       resolveMentionSuggestions={async ({ text, roomId }) => {
